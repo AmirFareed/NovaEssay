@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Professional Writing Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Nova<span class="accent">Essay</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Get In Touch</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Let's start a conversation.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Full Name *
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Enter your full name"
+                                required
+                            >
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email Address *
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Subject *
+                            </label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <optgroup label="Academic Writing & Research">
+                                    <option value="academic-writing">Academic Writing</option>
+                                    <option value="dissertation-thesis">Dissertation & Thesis</option>
+                                    <option value="research-paper">Research Paper</option>
+                                    <option value="editing-proofreading">Editing & Proofreading</option>
+                                    <option value="latex">LaTeX Formatting</option>
+                                    <option value="data-analysis">Data Analysis & Statistics</option>
+                                    <option value="publication-support">Publication Support</option>
+                                </optgroup>
+                                <optgroup label="Software & Web Development">
+                                    <option value="web-dev">Web Development</option>
+                                    <option value="mobile-dev">Mobile App Development</option>
+                                    <option value="fullstack">Full Stack Development</option>
+                                    <option value="api">API Development</option>
+                                </optgroup>
+                                <optgroup label="AI/ML & Data Science">
+                                    <option value="machine-learning">Machine Learning</option>
+                                    <option value="deep-learning">Deep Learning</option>
+                                    <option value="computer-vision">Computer Vision</option>
+                                    <option value="nlp">Natural Language Processing</option>
+                                    <option value="data-science">Data Science & Analytics</option>
+                                </optgroup>
+                                <optgroup label="Cybersecurity & Networking">
+                                    <option value="cybersecurity">Cybersecurity</option>
+                                    <option value="networking">Network Design</option>
+                                    <option value="penetration-testing">Penetration Testing</option>
+                                    <option value="cloud-security">Cloud Security</option>
+                                </optgroup>
+                                <optgroup label="Emerging Technologies">
+                                    <option value="iot">IoT Projects</option>
+                                    <option value="blockchain">Blockchain & Smart Contracts</option>
+                                    <option value="automation">Automation & Scripting</option>
+                                    <option value="chatbots">AI Chatbots</option>
+                                </optgroup>
+                                <optgroup label="Other">
+                                    <option value="technical-documentation">Technical Documentation</option>
+                                    <option value="consultation">General Consultation</option>
+                                    <option value="other">Other</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment-alt"></i> Message *
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                placeholder="Tell us about your project or inquiry..."
+                                required
+                            ></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. We'll get back to you soon.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper" data-aos="fade-left">
+                    <h2>Contact Information</h2>
+                    <p class="info-description">Reach out to us through any of these channels.</p>
+
+                    <div class="contact-info-cards">
+                        <div class="info-card clickable-card" data-action="email">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>ritujain7991@gmail.com</p>
+                        
+                            </div>
+                        </div>
+
+                        <div class="info-card clickable-card" data-action="whatsapp">
+                            <div class="info-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+44 7593 968598</p>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 High Street</p>
+                                <p>BLondon, SW1A 1AA, UK</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Average: 12 hours</p>
+                                <p>Maximum: 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-section">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-btn github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Interactive Map</p>
+                            <span>Boston, Massachusetts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="section-subtitle" data-aos="fade-up">Quick answers to common questions</p>
+
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h4>What types of services do you offer?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive academic writing services (research papers, dissertations, editing) and technical development services (web/mobile development, AI/ML, data science, cybersecurity, IoT, blockchain, and more). Our expertise covers over 50 specialized service categories.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h4>Do you work with emerging technologies?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We specialize in cutting-edge technologies including AI/ML (TensorFlow, PyTorch), computer vision, NLP, IoT projects, blockchain and smart contracts, cloud computing, automation, and AI chatbot development.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h4>How long does it take to complete a project?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity and scope. Simple projects (editing, small apps) take 3-7 days, research papers 5-10 days, dissertations 4-8 weeks, and complex development projects 2-12 weeks. We always provide realistic timelines during consultation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h4>What programming languages and tools do you work with?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work with Python, JavaScript, Java, Kotlin, Swift, C++, R, PHP, and more. Tools include React, Angular, Vue, Node.js, Django, Flask, TensorFlow, PyTorch, MongoDB, PostgreSQL, AWS, Azure, Docker, Kubernetes, and many others.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h4>Do you offer revisions and post-delivery support?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer unlimited revisions within the agreed scope until you're completely satisfied. For technical projects, we also provide post-delivery support, maintenance, bug fixes, and documentation to ensure long-term success.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h4>Is my information and project kept confidential?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we maintain strict confidentiality for all client information and projects. We sign NDAs when required, never share your data with third parties, and use secure communication channels. Your intellectual property is fully protected.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nova<span class="accent">Essay</span></h3>
+                    <p>Professional assistance in academic and technical writing services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NovaEssay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaEssay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-text">NE</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Nova<span class="accent">Essay</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Professional Assistance in<br><span class="gradient-text">Academic and Technical Writing</span></h1>
+            <p class="hero-subtitle typing-text" id="typingText"></p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1"></div>
+            <div class="floating-card card-2"></div>
+            <div class="floating-card card-3"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Comprehensive Services</h2>
+            <p class="section-subtitle">Expert support across academic and technical domains</p>
+
+            <!-- Academic Writing & Support Services -->
+            <div class="main-category" data-aos="fade-up">
+                <div class="category-header">
+                    <i class="fas fa-graduation-cap category-icon"></i>
+                    <h2>Academic Writing & Support Services</h2>
+                </div>
+
+                <!-- 1. Academic Writing -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-pen-fancy module-icon"></i>
+                        <h3>Academic Writing</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                            <h4>Essay & Assignment Writing</h4>
+                            <p>High-quality essays and assignments across all academic levels and disciplines.</p>
+                            <a href="https://drive.google.com/drive/folders/1lK82xV-IY1Z6FiKTah98xKl7w3hSPI4r?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-microscope"></i></div>
+                            <h4>Research Paper Writing</h4>
+                            <p>Comprehensive research papers with rigorous methodology and analysis.</p>
+                            <a href="https://drive.google.com/drive/folders/1HaVIL7CN9kJ8qJIRH8zCfNyoRxjta-aT?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-book"></i></div>
+                            <h4>Dissertation & Thesis Assistance</h4>
+                            <p>Expert guidance for comprehensive doctoral and master's research projects.</p>
+                            <a href="https://drive.google.com/drive/folders/1JVvnSwcA5pZMZflPEM7LKcPkpUdEh5hY?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+                            <h4>Literature Review Writing</h4>
+                            <p>Comprehensive literature reviews with critical analysis and synthesis.</p>
+                            <a href="https://drive.google.com/drive/folders/1fMFGwx_C-MAGnZebCMO8w9cHGNObRHFm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-clipboard"></i></div>
+                            <h4>Report & Case Study Writing</h4>
+                            <p>Detailed reports and case studies with professional formatting and analysis.</p>
+                            <a href="https://drive.google.com/drive/folders/1qtSpyndHe5RMqAUw7kQpUGuWUYbJ45PL?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="card-icon"><i class="fas fa-brain"></i></div>
+                            <h4>Critical Analysis & Reflection Papers</h4>
+                            <p>In-depth critical analysis and reflective writing with scholarly insight.</p>
+                            <a href="https://drive.google.com/drive/folders/1XB3a5WtLpkWbrixhAZJqHZ4K8KJWEox5?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Editing & Formatting -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-edit module-icon"></i>
+                        <h3>Editing & Formatting</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-spell-check"></i></div>
+                            <h4>Academic Editing & Proofreading</h4>
+                            <p>Meticulous editing for clarity, coherence, and academic excellence.</p>
+                            <a href="https://drive.google.com/drive/folders/1inFYBH3E6eUJDnQMQBBzLNejtvyDgzIs?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-quote-right"></i></div>
+                            <h4>Citation & Referencing</h4>
+                            <p>Expert formatting in APA, MLA, Chicago, Harvard, IEEE, and more.</p>
+                            <a href="https://drive.google.com/drive/folders/1inFYBH3E6eUJDnQMQBBzLNejtvyDgzIs?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-code"></i></div>
+                            <h4>LaTeX Formatting & Templates</h4>
+                            <p>Professional LaTeX documents for scientific and mathematical content.</p>
+                            <a href="https://drive.google.com/drive/folders/1yg6InT_RjM_g-TkdtUm8j8y6qOfYw_QY?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-check-double"></i></div>
+                            <h4>Plagiarism Checking & Reduction</h4>
+                            <p>Comprehensive plagiarism detection and originality improvement.</p>
+                            <a href="https://drive.google.com/drive/folders/1inFYBH3E6eUJDnQMQBBzLNejtvyDgzIs?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Research Assistance -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-search module-icon"></i>
+                        <h3>Research Assistance</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h4>Research Proposal Writing</h4>
+                            <p>Compelling research proposals with clear methodology and objectives.</p>
+                            <a href="https://drive.google.com/drive/folders/1n2dZFbqXTzDeRHq_jFllZ_M-blVbboGm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h4>Data Collection & Analysis</h4>
+                            <p>Expert analysis using SPSS, R, Excel, and Python for research insights.</p>
+                            <a href="https://drive.google.com/drive/folders/1n2dZFbqXTzDeRHq_jFllZ_M-blVbboGm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-poll"></i></div>
+                            <h4>Survey Design & Statistical Analysis</h4>
+                            <p>Professional survey design with comprehensive statistical evaluation.</p>
+                            <a href="https://drive.google.com/drive/folders/1n2dZFbqXTzDeRHq_jFllZ_M-blVbboGm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                            <h4>Systematic Review & Meta-Analysis</h4>
+                            <p>Rigorous systematic reviews and meta-analyses for evidence synthesis.</p>
+                            <a href="https://drive.google.com/drive/folders/1n2dZFbqXTzDeRHq_jFllZ_M-blVbboGm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Publication Support -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-newspaper module-icon"></i>
+                        <h3>Publication Support</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-upload"></i></div>
+                            <h4>Journal Selection & Manuscript Submission</h4>
+                            <p>Strategic journal selection and professional submission assistance.</p>
+                            <a href="https://drive.google.com/drive/folders/1KdIBGweYRhNAUCJuXtAgur0vcO3rGdTB?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-align-left"></i></div>
+                            <h4>Article Formatting per Journal Guidelines</h4>
+                            <p>Precise formatting according to specific journal requirements.</p>
+                            <a href="https://drive.google.com/drive/folders/1KdIBGweYRhNAUCJuXtAgur0vcO3rGdTB?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-comments"></i></div>
+                            <h4>Response to Reviewers & Revision</h4>
+                            <p>Professional responses to reviewers with strategic revisions.</p>
+                            <a href="https://drive.google.com/drive/folders/1KdIBGweYRhNAUCJuXtAgur0vcO3rGdTB?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-users"></i></div>
+                            <h4>Conference Paper Preparation</h4>
+                            <p>Engaging conference papers formatted for academic presentations.</p>
+                            <a href="https://drive.google.com/drive/folders/1KdIBGweYRhNAUCJuXtAgur0vcO3rGdTB?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Academic Coaching -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-chalkboard-teacher module-icon"></i>
+                        <h3>Academic Coaching</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-presentation"></i></div>
+                            <h4>Academic Presentation Design</h4>
+                            <p>Professional slides in PowerPoint and Beamer (LaTeX) for impactful presentations.</p>
+                            <a href="https://drive.google.com/drive/folders/19RJkIbLdXCpXlRGdiLXA5-GoOpSLFKFg?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                            <h4>Academic CV / Resume Writing</h4>
+                            <p>Polished academic CVs and resumes highlighting your achievements.</p>
+                            <a href="https://drive.google.com/drive/folders/1aFGZKVAd8CyNjQ0HmOcLDqri10ekaPwL?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>SOP & Personal Statement Editing</h4>
+                            <p>Compelling statements of purpose for graduate school applications.</p>
+                            <a href="https://drive.google.com/drive/folders/1CJbBRUyWerkTx9Fli6kkwrsynaKYlXcZ?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-award"></i></div>
+                            <h4>Study Plan & Scholarship Essays</h4>
+                            <p>Strategic study plans and persuasive scholarship application essays.</p>
+                            <a href="https://drive.google.com/drive/folders/1vDoGayuFMuxpXV-ucG3nZjqENsCC4zJm?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Writing & Development Services -->
+            <div class="main-category" data-aos="fade-up">
+                <div class="category-header">
+                    <i class="fas fa-laptop-code category-icon"></i>
+                    <h2>Technical Writing & Development Services</h2>
+                </div>
+
+                <!-- 1. Software & Web Development -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-globe module-icon"></i>
+                        <h3>Software & Web Development</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fab fa-html5"></i></div>
+                            <h4>Frontend Development</h4>
+                            <p>Modern interfaces with HTML, CSS, JavaScript, React, Vue, and Angular.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-server"></i></div>
+                            <h4>Backend Development</h4>
+                            <p>Robust backends with Node.js, Django, Flask, PHP, and ASP.NET.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                            <h4>Full Stack Web Applications</h4>
+                            <p>Complete web solutions from database to user interface.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-plug"></i></div>
+                            <h4>API Development & Integration</h4>
+                            <p>RESTful and GraphQL APIs with seamless third-party integrations.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-database"></i></div>
+                            <h4>Database Design</h4>
+                            <p>Efficient database architectures with MySQL, PostgreSQL, and MongoDB.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="card-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <h4>Web Hosting & Deployment</h4>
+                            <p>Professional deployment on AWS, Firebase, Netlify, and Heroku.</p>
+                            <a href="https://drive.google.com/drive/folders/1fK57WPaE429Of33sTwGnNoGmTeknrbSb?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Mobile App Development -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-mobile-alt module-icon"></i>
+                        <h3>Mobile App Development</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fab fa-android"></i></div>
+                            <h4>Android App Development</h4>
+                            <p>Native Android apps with Java and Kotlin for optimal performance.</p>
+                            <a href="https://drive.google.com/drive/folders/12jL1L8C2jR_nYG7wCVQESrm6onrhwdTc?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fab fa-apple"></i></div>
+                            <h4>iOS App Development</h4>
+                            <p>Elegant iOS applications built with Swift for Apple devices.</p>
+                            <a href="https://drive.google.com/drive/folders/12jL1L8C2jR_nYG7wCVQESrm6onrhwdTc?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h4>Cross-platform Apps</h4>
+                            <p>Unified experiences with Flutter and React Native across platforms.</p>
+                            <a href="https://drive.google.com/drive/folders/12jL1L8C2jR_nYG7wCVQESrm6onrhwdTc?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                            <h4>UI/UX Design for Mobile Apps</h4>
+                            <p>Intuitive and beautiful mobile interfaces focused on user experience.</p>
+                            <a href="https://drive.google.com/drive/folders/12jL1L8C2jR_nYG7wCVQESrm6onrhwdTc?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-tools"></i></div>
+                            <h4>App Maintenance & Version Upgrades</h4>
+                            <p>Ongoing support, bug fixes, and feature updates for mobile apps.</p>
+                            <a href="https://drive.google.com/drive/folders/12jL1L8C2jR_nYG7wCVQESrm6onrhwdTc?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Artificial Intelligence & Machine Learning -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-robot module-icon"></i>
+                        <h3>Artificial Intelligence & Machine Learning</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-brain"></i></div>
+                            <h4>Machine Learning Model Development</h4>
+                            <p>Custom ML models for classification, regression, and clustering tasks.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                            <h4>Deep Learning</h4>
+                            <p>Neural networks with TensorFlow, PyTorch, and Keras for complex problems.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-eye"></i></div>
+                            <h4>Computer Vision Projects</h4>
+                            <p>Image classification, object detection, and OCR solutions.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-language"></i></div>
+                            <h4>Natural Language Processing</h4>
+                            <p>Text analysis, chatbots, and sentiment analysis applications.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-star"></i></div>
+                            <h4>Recommendation Systems</h4>
+                            <p>Personalized recommendation engines for enhanced user engagement.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Predictive Analytics & Data Modeling</h4>
+                            <p>Advanced predictive models for business intelligence and forecasting.</p>
+                            <a href="https://drive.google.com/drive/folders/1YinJQw5I5l76YaxJkW78LErCPJHxV2cI?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Data Science & Analytics -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-chart-pie module-icon"></i>
+                        <h3>Data Science & Analytics</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-broom"></i></div>
+                            <h4>Data Cleaning & Preprocessing</h4>
+                            <p>Transform raw data into clean, analysis-ready datasets.</p>
+                            <a href="https://drive.google.com/drive/folders/1bDe7lBbnwlK5h_BYg8C6UEIatTWPkTI3?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-chart-area"></i></div>
+                            <h4>Data Visualization</h4>
+                            <p>Stunning visualizations with Matplotlib, Seaborn, Power BI, and Tableau.</p>
+                            <a href="https://drive.google.com/drive/folders/1bDe7lBbnwlK5h_BYg8C6UEIatTWPkTI3?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-search-plus"></i></div>
+                            <h4>Exploratory Data Analysis (EDA)</h4>
+                            <p>Comprehensive data exploration to uncover patterns and insights.</p>
+                            <a href="https://drive.google.com/drive/folders/1bDe7lBbnwlK5h_BYg8C6UEIatTWPkTI3?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                            <h4>Statistical Modeling & Hypothesis Testing</h4>
+                            <p>Rigorous statistical analysis and hypothesis validation.</p>
+                            <a href="https://drive.google.com/drive/folders/1bDe7lBbnwlK5h_BYg8C6UEIatTWPkTI3?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-hdd"></i></div>
+                            <h4>Big Data Processing</h4>
+                            <p>Large-scale data processing with Hadoop and Spark frameworks.</p>
+                            <a href="https://drive.google.com/drive/folders/1bDe7lBbnwlK5h_BYg8C6UEIatTWPkTI3?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Cybersecurity & Networking -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-shield-alt module-icon"></i>
+                        <h3>Cybersecurity & Networking</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                            <h4>Network Design & Configuration</h4>
+                            <p>Professional network architecture and configuration solutions.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-user-secret"></i></div>
+                            <h4>Ethical Hacking & Penetration Testing</h4>
+                            <p>Security assessments and vulnerability identification services.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <h4>Security Audits & Risk Assessments</h4>
+                            <p>Comprehensive security audits and risk mitigation strategies.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-fire"></i></div>
+                            <h4>Firewall & IDS/IPS Setup</h4>
+                            <p>Advanced firewall and intrusion detection/prevention systems.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-code"></i></div>
+                            <h4>Secure Coding Practices</h4>
+                            <p>Implementation of security best practices in software development.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="card-icon"><i class="fas fa-cloud-lock"></i></div>
+                            <h4>Cloud Security (AWS, Azure)</h4>
+                            <p>Cloud infrastructure security and compliance management.</p>
+                            <a href="https://drive.google.com/drive/folders/1wpRwN6Yv2bhBo_PMiqdxSQougHkw-Pg0?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Technical Documentation -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-file-code module-icon"></i>
+                        <h3>Technical Documentation</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                            <h4>Software Documentation</h4>
+                            <p>Comprehensive user manuals and API documentation.</p>
+                            <a href="https://drive.google.com/drive/folders/1CvXdl1bo9d2oxxPnkAz1X0oooosZqJ_8?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+                            <h4>System Architecture Diagrams</h4>
+                            <p>Clear visual representations of system architectures and workflows.</p>
+                            <a href="https://drive.google.com/drive/folders/1CvXdl1bo9d2oxxPnkAz1X0oooosZqJ_8?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <h4>Project Proposals & Technical Reports</h4>
+                            <p>Detailed technical proposals and comprehensive project reports.</p>
+                            <a href="https://drive.google.com/drive/folders/1CvXdl1bo9d2oxxPnkAz1X0oooosZqJ_8?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-blog"></i></div>
+                            <h4>Technical Blog Writing</h4>
+                            <p>Engaging technical content for blogs and knowledge bases.</p>
+                            <a href="https://drive.google.com/drive/folders/1CvXdl1bo9d2oxxPnkAz1X0oooosZqJ_8?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fab fa-github"></i></div>
+                            <h4>Code Commenting & Version Control</h4>
+                            <p>Professional code documentation and Git/GitHub management.</p>
+                            <a href="https://drive.google.com/drive/folders/1CvXdl1bo9d2oxxPnkAz1X0oooosZqJ_8?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Emerging Technologies -->
+                <div class="service-module">
+                    <div class="module-header">
+                        <i class="fas fa-rocket module-icon"></i>
+                        <h3>Emerging Technologies</h3>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>Internet of Things (IoT) Projects</h4>
+                            <p>Smart IoT solutions connecting devices and sensors.</p>
+                            <a href="https://drive.google.com/drive/folders/1V4-z2317ZXh2c8BFR5gtqY_xTDFNsMmp?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="card-icon"><i class="fas fa-link"></i></div>
+                            <h4>Blockchain & Smart Contracts</h4>
+                            <p>Blockchain fundamentals and smart contract development.</p>
+                            <a href="https://drive.google.com/drive/folders/1V4-z2317ZXh2c8BFR5gtqY_xTDFNsMmp?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                            <h4>Edge & Cloud Computing Solutions</h4>
+                            <p>Distributed computing solutions for modern applications.</p>
+                            <a href="https://drive.google.com/drive/folders/1V4-z2317ZXh2c8BFR5gtqY_xTDFNsMmp?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                            <h4>Automation using Python/Shell Scripts</h4>
+                            <p>Task automation and workflow optimization scripts.</p>
+                            <a href="https://drive.google.com/drive/folders/1V4-z2317ZXh2c8BFR5gtqY_xTDFNsMmp?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card-icon"><i class="fas fa-comments"></i></div>
+                            <h4>AI Chatbots & Assistants</h4>
+                            <p>Intelligent conversational AI solutions for customer engagement.</p>
+                            <a href="https://drive.google.com/drive/folders/1V4-z2317ZXh2c8BFR5gtqY_xTDFNsMmp?usp=drive_link" class="sample-btn" target="_blank">
+                                <span>View Samples</span><i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's collaborate to bring your ideas to life with professional precision.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nova<span class="accent">Essay</span></h3>
+                    <p>Professional assistance in academic and technical writing services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NovaEssay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="home.js"></script>
+</body>
+</html>
