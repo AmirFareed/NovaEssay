@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Professional Writing Services</title>
+    <title>Contact Us | NovaEssay - Get in Touch</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact NovaEssay for academic writing, research support, web development, AI/ML services, and more. Available 24/7 via WhatsApp. Response time: 12-24 hours.">
+    <meta name="keywords" content="contact NovaEssay, academic writing help, technical support, dissertation help, research assistance">
+    <meta name="author" content="NovaEssay">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://novaessay.com/contact.html">
+    <meta property="og:title" content="Contact NovaEssay - Get in Touch">
+    <meta property="og:description" content="Reach out for professional academic writing and technical development services. Available 24/7.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://novaessay.com/contact.html">
+    <meta property="twitter:title" content="Contact NovaEssay - Get in Touch">
+    <meta property="twitter:description" content="Reach out for professional academic writing and technical development services. Available 24/7.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
@@ -18,13 +41,13 @@
             <div class="logo">
                 <span class="logo-text">Nova<span class="accent">Essay</span></span>
             </div>
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu" id="navMenu" role="navigation">
                 <li><a href="home.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+                <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -49,40 +72,44 @@
                     <h2>Send Us a Message</h2>
                     <p class="form-description">Fill out the form below and we'll get back to you within 24 hours.</p>
                     
-                    <form id="contactForm" class="contact-form">
+                    <form id="contactForm" class="contact-form" novalidate>
                         <div class="form-group">
                             <label for="name">
                                 <i class="fas fa-user"></i> Full Name *
                             </label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
                                 placeholder="Enter your full name"
+                                aria-required="true"
+                                aria-describedby="nameError"
                                 required
                             >
-                            <span class="error-message" id="nameError"></span>
+                            <span class="error-message" id="nameError" role="alert"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">
                                 <i class="fas fa-envelope"></i> Email Address *
                             </label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
                                 placeholder="your.email@example.com"
+                                aria-required="true"
+                                aria-describedby="emailError"
                                 required
                             >
-                            <span class="error-message" id="emailError"></span>
+                            <span class="error-message" id="emailError" role="alert"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">
                                 <i class="fas fa-tag"></i> Subject *
                             </label>
-                            <select id="subject" name="subject" required>
+                            <select id="subject" name="subject" aria-required="true" aria-describedby="subjectError" required>
                                 <option value="">Select a subject</option>
                                 <optgroup label="Academic Writing & Research">
                                     <option value="academic-writing">Academic Writing</option>
@@ -124,21 +151,23 @@
                                     <option value="other">Other</option>
                                 </optgroup>
                             </select>
-                            <span class="error-message" id="subjectError"></span>
+                            <span class="error-message" id="subjectError" role="alert"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="message">
                                 <i class="fas fa-comment-alt"></i> Message *
                             </label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="6" 
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
                                 placeholder="Tell us about your project or inquiry..."
+                                aria-required="true"
+                                aria-describedby="messageError"
                                 required
                             ></textarea>
-                            <span class="error-message" id="messageError"></span>
+                            <span class="error-message" id="messageError" role="alert"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary">
@@ -189,7 +218,7 @@
                             <div>
                                 <h4>Location</h4>
                                 <p>123 High Street</p>
-                                <p>BLondon, SW1A 1AA, UK</p>
+                                <p>London, SW1A 1AA, UK</p>
                             </div>
                         </div>
 
@@ -209,19 +238,19 @@
                     <div class="social-section">
                         <h3>Connect With Us</h3>
                         <div class="social-links">
-                            <a href="#" class="social-btn linkedin">
+                            <a href="https://www.linkedin.com/in/novaessay" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="Visit our LinkedIn page">
                                 <i class="fab fa-linkedin-in"></i>
                                 <span>LinkedIn</span>
                             </a>
-                            <a href="#" class="social-btn github">
+                            <a href="https://github.com/novaessay" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="Visit our GitHub profile">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" class="social-btn twitter">
+                            <a href="https://twitter.com/novaessay" target="_blank" rel="noopener noreferrer" class="social-btn twitter" aria-label="Visit our Twitter profile">
                                 <i class="fab fa-twitter"></i>
                                 <span>Twitter</span>
                             </a>
-                            <a href="#" class="social-btn instagram">
+                            <a href="https://www.instagram.com/novaessay" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Visit our Instagram profile">
                                 <i class="fab fa-instagram"></i>
                                 <span>Instagram</span>
                             </a>
@@ -233,7 +262,7 @@
                         <div class="map-placeholder">
                             <i class="fas fa-map-marked-alt"></i>
                             <p>Interactive Map</p>
-                            <span>Boston, Massachusetts</span>
+                            <span>London, United Kingdom</span>
                         </div>
                     </div>
                 </div>
@@ -330,9 +359,9 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/novaessay" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/novaessay" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="mailto:ritujain7991@gmail.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -343,7 +372,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 

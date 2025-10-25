@@ -4,11 +4,14 @@
     --accent-color: #4a90e2;
     --accent-gold: #5b7fa8;
     --accent-light: #6ba3ff;
-    --text-primary: #0a1628;
-    --text-secondary: #475569;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e8f1ff 100%);
+    --text-primary: #1a2332;
+    --text-secondary: #4a5568;
+    --text-heading: #0f1419;
+    --bg-primary: #f9fafb;
+    --bg-secondary: #f3f4f6;
+    --bg-gradient: linear-gradient(135deg, #f9fafb 0%, #e8f1ff 100%);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.3);
     --error-color: #ef4444;
     --success-color: #10b981;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,11 +24,14 @@
 
 [data-theme="dark"] {
     --primary-color: #4a90e2;
-    --text-primary: #f1f5f9;
+    --text-primary: #e2e8f0;
     --text-secondary: #cbd5e1;
+    --text-heading: #f1f5f9;
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    --glass-bg: rgba(30, 41, 59, 0.75);
+    --glass-border: rgba(100, 116, 139, 0.2);
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.7);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.8);
@@ -324,14 +330,16 @@ body::before {
 
 /* Contact Form */
 .contact-form-wrapper {
-    background: var(--bg-primary);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     padding: 50px;
     border-radius: 25px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg), 0 0 0 1px var(--glass-border);
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 0.8s, transform 0.8s;
-    border: 1px solid rgba(74, 144, 226, 0.1);
+    border: 1px solid var(--glass-border);
 }
 
 .contact-form-wrapper.aos-animate {
@@ -577,15 +585,17 @@ body::before {
 }
 
 .info-card {
-    background: var(--bg-primary);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     padding: 28px;
     border-radius: 18px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md), 0 0 0 1px var(--glass-border);
     display: flex;
     gap: 20px;
     align-items: flex-start;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 1px solid var(--glass-border);
 }
 
 .info-card:hover {
@@ -851,15 +861,17 @@ body::before {
 }
 
 .faq-item {
-    background: var(--bg-secondary);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 18px;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-sm), 0 0 0 1px var(--glass-border);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s, transform 0.6s, box-shadow 0.3s;
-    border: 2px solid transparent;
+    border: 1px solid var(--glass-border);
 }
 
 .faq-item:hover {
