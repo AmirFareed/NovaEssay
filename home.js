@@ -1,54 +1,67 @@
 // Enhanced Loading Screen with progress
 window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loadingScreen');
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
+    try {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (loadingScreen) {
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                initParticles();
+            }, 1800);
+        }
+    } catch (error) {
+        console.error('Error in loading screen:', error);
         document.body.style.overflow = 'auto';
-        initParticles();
-    }, 1800);
+    }
 });
 
 // Particle Background Effect
 function initParticles() {
-    const hero = document.querySelector('.hero');
-    if (!hero || window.innerWidth < 768) return;
-    
-    const particlesHTML = '<div class="particles" id="particles"></div>';
-    hero.insertAdjacentHTML('beforeend', particlesHTML);
-    
-    const particles = document.getElementById('particles');
-    const particleCount = 30;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: ${Math.random() * 4 + 2}px;
-            height: ${Math.random() * 4 + 2}px;
-            background: ${Math.random() > 0.5 ? '#14b8a6' : '#d4af37'};
-            border-radius: 50%;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            opacity: ${Math.random() * 0.5 + 0.2};
-            animation: floatParticle ${Math.random() * 20 + 10}s linear infinite;
-            animation-delay: ${Math.random() * 5}s;
-        `;
-        particles.appendChild(particle);
-    }
-    
-    const style = document.createElement('style');
-    style.textContent = `
-        .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-        @keyframes floatParticle {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(100px, -100px) rotate(90deg); }
-            50% { transform: translate(0, -200px) rotate(180deg); }
-            75% { transform: translate(-100px, -100px) rotate(270deg); }
-            100% { transform: translate(0, 0) rotate(360deg); }
+    try {
+        const hero = document.querySelector('.hero');
+        if (!hero || window.innerWidth < 768) return;
+
+        const particlesHTML = '<div class="particles" id="particles"></div>';
+        hero.insertAdjacentHTML('beforeend', particlesHTML);
+
+        const particles = document.getElementById('particles');
+        if (!particles) return;
+
+        const particleCount = 30;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 4 + 2}px;
+                height: ${Math.random() * 4 + 2}px;
+                background: ${Math.random() > 0.5 ? '#14b8a6' : '#d4af37'};
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                opacity: ${Math.random() * 0.5 + 0.2};
+                animation: floatParticle ${Math.random() * 20 + 10}s linear infinite;
+                animation-delay: ${Math.random() * 5}s;
+            `;
+            particles.appendChild(particle);
         }
-    `;
-    document.head.appendChild(style);
+
+        const style = document.createElement('style');
+        style.textContent = `
+            .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+            @keyframes floatParticle {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                25% { transform: translate(100px, -100px) rotate(90deg); }
+                50% { transform: translate(0, -200px) rotate(180deg); }
+                75% { transform: translate(-100px, -100px) rotate(270deg); }
+                100% { transform: translate(0, 0) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    } catch (error) {
+        console.error('Error initializing particles:', error);
+    }
 }
 
 // Enhanced Navbar Scroll Effect with color change
@@ -57,33 +70,41 @@ const scrollProgress = document.getElementById('scrollProgress');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Navbar scroll effects
-    if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    
-    // Hide navbar on scroll down, show on scroll up
-    if (scrollTop > lastScrollTop && scrollTop > 500) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-    lastScrollTop = scrollTop;
-    
-    // Update scroll progress bar with gradient effect
-    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (scrollTop / windowHeight) * 100;
-    scrollProgress.style.width = scrolled + '%';
-    
-    // Change progress bar color based on scroll position
-    if (scrolled > 75) {
-        scrollProgress.style.background = 'linear-gradient(90deg, #d4af37, #14b8a6)';
-    } else {
-        scrollProgress.style.background = 'linear-gradient(90deg, #14b8a6, #d4af37)';
+    try {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Navbar scroll effects
+        if (navbar) {
+            if (scrollTop > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Hide navbar on scroll down, show on scroll up
+            if (scrollTop > lastScrollTop && scrollTop > 500) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+        }
+        lastScrollTop = scrollTop;
+
+        // Update scroll progress bar with gradient effect
+        if (scrollProgress) {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = windowHeight > 0 ? (scrollTop / windowHeight) * 100 : 0;
+            scrollProgress.style.width = scrolled + '%';
+
+            // Change progress bar color based on scroll position
+            if (scrolled > 75) {
+                scrollProgress.style.background = 'linear-gradient(90deg, #d4af37, #14b8a6)';
+            } else {
+                scrollProgress.style.background = 'linear-gradient(90deg, #14b8a6, #d4af37)';
+            }
+        }
+    } catch (error) {
+        console.error('Error in scroll handler:', error);
     }
 });
 
@@ -91,22 +112,34 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    
-    // Animate hamburger lines
-    const spans = hamburger.querySelectorAll('span');
-    if (hamburger.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translateY(10px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-    } else {
-        spans[0].style.transform = '';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = '';
-    }
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        try {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Update ARIA attribute
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+
+            // Animate hamburger lines
+            const spans = hamburger.querySelectorAll('span');
+            if (spans.length >= 3) {
+                if (isExpanded) {
+                    spans[0].style.transform = 'rotate(45deg) translateY(10px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
+                } else {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
+                }
+            }
+        } catch (error) {
+            console.error('Error toggling mobile menu:', error);
+        }
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {

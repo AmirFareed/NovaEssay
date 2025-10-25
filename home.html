@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaEssay</title>
-    
+    <title>NovaEssay - Professional Academic & Technical Writing Services</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
-    
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="NovaEssay provides professional academic writing, research support, web development, AI/ML services, and technical solutions. Expert assistance for students, researchers, and businesses worldwide.">
+    <meta name="keywords" content="academic writing, dissertation help, research paper writing, web development, mobile apps, AI ML services, data science, cybersecurity, IoT, blockchain, technical writing">
+    <meta name="author" content="NovaEssay">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://novaessay.com/">
+    <meta property="og:title" content="NovaEssay - Professional Academic & Technical Writing Services">
+    <meta property="og:description" content="Expert assistance in academic writing, research, web development, AI/ML, and emerging technologies. Serving 800+ clients worldwide.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://novaessay.com/">
+    <meta property="twitter:title" content="NovaEssay - Professional Academic & Technical Writing Services">
+    <meta property="twitter:description" content="Expert assistance in academic writing, research, web development, AI/ML, and emerging technologies. Serving 800+ clients worldwide.">
+    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/4277/4277104.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
+    <div class="loading-screen" id="loadingScreen" role="status" aria-live="polite" aria-label="Loading page content">
         <div class="loader">
             <div class="loader-text">NE</div>
         </div>
@@ -29,13 +48,13 @@
             <div class="logo">
                 <span class="logo-text">Nova<span class="accent">Essay</span></span>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="home.html" class="nav-link active">Home</a></li>
+            <ul class="nav-menu" id="navMenu" role="navigation">
+                <li><a href="home.html" class="nav-link active" aria-current="page">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -760,9 +779,9 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/novaessay" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/novaessay" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="mailto:ritujain7991@gmail.com" aria-label="Email Us"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -773,7 +792,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
